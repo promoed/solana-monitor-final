@@ -1,6 +1,7 @@
+const fetch = require("node-fetch");
+
 export default async function handler(req, res) {
   try {
-    const fetch = (await import('node-fetch')).default;
     const response = await fetch("https://quote-api.jup.ag/v6/tokens");
 
     if (!response.ok) {
